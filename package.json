@@ -4,6 +4,7 @@
   "description": "Projet 1 du cours \"Front-end moderno: Gulp, SASS, NPM-script, Git e Git-bash\"",
   "main": "index.js",
   "scripts": {
+    "nodesass": "node-sass",
     "preinstall": "mkdir -p src/components/bootstrap/ src/components/font-awesome/",
     "postinstall": "cp -r node_modules/bootstrap/dist src/components/bootstrap/ && cp -r node_modules/font-awesome/css src/components/font-awesome/ && cp -r node_modules/font-awesome/fonts src/components/font-awesome/"
   },
@@ -22,5 +23,8 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.3"
   }
 }
