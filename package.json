@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-ricardo-do-vale",
+  "version": "1.0.0",
+  "description": "Projet 1 du cours \"Front-end moderno: Gulp, SASS, NPM-script, Git e Git-bash\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Front-end",
+    "moderne",
+    "Gulp",
+    "SASS",
+    "NPM-script",
+    "Git",
+    "et",
+    "Git-bash"
+  ],
+  "author": "Ricardo Do Vale",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
