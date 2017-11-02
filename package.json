@@ -4,7 +4,8 @@
   "description": "Projet 1 du cours \"Front-end moderno: Gulp, SASS, NPM-script, Git e Git-bash\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "mkdir -p src/components/bootstrap/ src/components/font-awesome/",
+    "postinstall": "cp -r node_modules/bootstrap/dist src/components/bootstrap/ && cp -r node_modules/font-awesome/css src/components/font-awesome/ && cp -r node_modules/font-awesome/fonts src/components/font-awesome/"
   },
   "keywords": [
     "Front-end",
