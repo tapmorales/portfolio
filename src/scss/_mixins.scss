@@ -1,0 +1,40 @@
+@mixin phone {
+  @media only screen and (min-width: map-get($breakpoints, 'phone')){
+    @content; 
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: map-get($breakpoints, 'tablet')){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: map-get($breakpoints, 'desktop')){
+    @content; 
+  }
+}
+
+@mixin clearfix {
+  *zoom:1;
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin animation($image, $param-animation: '90s linear infinite reverse') {
+  background-image: url(../img/#{$image});
+  animation: animation_cenario #{$param-animation};
+}

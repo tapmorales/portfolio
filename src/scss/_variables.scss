@@ -1,2 +1,63 @@
-$main-color: #64a59a;
+// VARIABLES
+
+// Colors principal
+$green: #64a59a;
+$antracite: #303030;
+// Others colors
+$white: #fff;
+$black: #000;
+
+// Colors Lighten/Darken
+// Lighten
+$light-green-5: lighten($green, 5%);
+$light-green-20: lighten($green, 20);
+
+
+// Darken
+$dark-green-3: darken($green, 3%);
+$dark-green-5: darken($green, 5%);
+$dark-green-20: darken($green, 20);
+
+// GLOBAL VARIABLES
+
+// Grid & Responsive
+// Sizing
+$columns: 12;
+$grid-max-width: 1200px;
+
+// Breakpoints
+$breakpoints: (
+  phone: 480px,
+  tablet: 768px,
+  desktop: 1024px
+);
+
+// Typography
+// Global fonts
+$text-color: $black;
+$global-font-family: 'Open Sans', sans-serif;
+$paragraph-font-size: 1.4rem;
+$paragraph-font-family: $global-font-family;
+$uppercase-text: uppercase;
+$weight-text: bold;
+
+// Headers
+$heading-font-family: 'Open Sans', 'Helvetica neue', Arial, sans-serif;
+$heading-weight: bold;
+$heading-font-size: (
+  h1: 40px,
+  h2: 36px,
+  h3: 32px,
+  h4: 28px,
+  h5: 24px,
+  h6: 20px
+);
+
+// Components
+// Icon hamburger
+$header-nav-hamburger-font-size: 2em;
+// Navigation menu
 $header-nav-height: 50px;
+$header-nav-bg-color: $light-green-20;
+$header-nav-anchor-font-size: 1.5em;
+$menu-anchor-color: $white;

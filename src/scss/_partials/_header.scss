@@ -1,5 +1,106 @@
+// Variables .header-anime ...
+$header-anime-height: 300px;
+$cenario-width: 2400px;
+
+// Items d'annimation
+$animationItems: (
+  nuvens: null,
+  casas: '30s linear infinite reverse',
+  rua: '30s linear infinite reverse',
+  carrousCima: '15s linear infinite reverse',
+  carrosBaixo: '15s linear infinite'
+);
+
+
+
 .header-anime {
-  background-color: $main-color;
-  $h: 400px;
-  height: $h;
+  background-color: $green;
+  padding-bottom: 0;
+  padding-top: 96px;
+  
+  .header-anime__title {
+    color: $antracite;
+    font-size:  map-get($heading-font-size, h1);
+    font-weight: $heading-weight;
+    font-family: $heading-font-family;
+  }
+  
+  .header-anime__subtitle {
+    font-size: 1.8em;
+    color: $white;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  
+  &__illustration {
+    background-image: url(../img/cenario_all_960.png);
+    height: $header-anime-height/2;
+    background-size: auto 100%;
+    background-position: center top;
+    
+    &>div {
+      display: none;
+    }
+    @include phone {
+      background-image: url(../img/cenario_all_1530.png);
+    }
+    @include tablet {
+      background-image: url(../img/cenario_bg.png);
+      height: $header-anime-height;
+      position: relative;
+      
+      &>div {
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $cenario-width * 2;
+      }
+      
+      
+      @keyframes animation_cenario {
+        from {
+          transform: translateX(-50%) translateZ(0);
+        }
+        to {
+          transform: translateX(0%) translateZ(0);
+        }
+      }
+      
+      
+      @each $element, $typeanimation in $animationItems {
+        if $typeanimation{
+          .#{element} {
+            @include animation('cenario_#{$element}.png', $typeanimation);
+          }
+        } else {
+          .#{element} {
+            @include animation('cenario_#{$element}.png');
+          }
+        }
+      }
+  
+
+      /*.nuages {
+        @include animation('cenario_nuvens.png', 90s);
+      }
+      
+      .maisons {
+        @include animation('cenario_casas.png', '30s linear infinite reverse');
+      }
+    
+      .route {
+        @include animation('cenario_rua.png', '30s linear infinite reverse');
+      }
+      
+      .voitureHaut {
+        @include animation('cenario_carrosCima.png', '15s linear infinite reverse');
+      }
+      
+      .voituresBas {
+        @include animation('cenario_carrosBaixo.png', '15s linear infinite');
+      }*/
+    }
+  }
 }

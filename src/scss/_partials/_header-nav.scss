@@ -1,5 +1,5 @@
 .header-nav {
-  background-color: lighten($main-color, 20%);
+  background-color: $header-nav-bg-color;
   
   .js &{
     height: $header-nav-height;
@@ -30,16 +30,16 @@
     .js &{
       display: inline-block;
       float: right;
-      height: 100%;
+      height: $header-nav-height;
       border: none;
       background-color: transparent;
-      color: white;
-      font-size: 2em;
+      color: $white;
+      font-size: $header-nav-hamburger-font-size;
       padding: 0 .5em;
       border-radius: 0;
       
       &:hover, &:focus {
-        background-color: lighten($main-color, 5%);
+        background-color: $light-green-5;
       }
     }
   }
@@ -50,14 +50,14 @@
     padding: 0;
     
     a {
-      color: white;
+      color: $menu-anchor-color;
       display: block;
       padding: 1em;
-      font-size: 1.5em;
-      border-top: 1px solid darken($main-color, 5%);
+      font-size: $header-nav-anchor-font-size;
+      border-top: 1px solid $dark-green-5;
       
       &:hover {
-        background-color: darken($main-color, 3%);
+        background-color: $dark-green-3;
       }
     }
     
