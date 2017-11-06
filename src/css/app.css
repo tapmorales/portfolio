@@ -140,3 +140,55 @@ h1, h2, h3, h4, h5, h6, .title {
         .header-anime__illustration else .element {
           background-image: url(../img/cenario_carrosBaixo.png);
           animation: animation_cenario 90s linear infinite reverse; } }
+
+.card-portfolio {
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  position: relative; }
+  .card-portfolio:before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background: #777;
+    width: 50%;
+    height: 20px;
+    bottom: 10px;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(-3deg);
+    left: 5px; }
+  .card-portfolio:after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background: #777;
+    width: 50%;
+    height: 20px;
+    bottom: 10px;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(3deg);
+    right: 10px; }
+  .card-portfolio__image {
+    height: 230px;
+    overflow: hidden; }
+    .card-portfolio__image img {
+      max-width: 100%;
+      opacity: 0.5;
+      transition: opacity .3s linear, transform 1s ease-in; }
+  .card-portfolio:hover img {
+    opacity: 1;
+    transform: scale(1.1) rotate(-2deg); }
+  .card-portfolio:hover .card-portfolio__btn {
+    background-color: #c5ddd9;
+    color: #fff; }
+    .card-portfolio:hover .card-portfolio__btn:hover {
+      background-color: #3fcab2; }
+  .card-portfolio__btn {
+    background-color: transparent;
+    color: #64a59a;
+    display: block;
+    width: 100px;
+    border: none;
+    border-radius: 0;
+    transition: all .3s linear;
+    margin-left: auto; }

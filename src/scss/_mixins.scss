@@ -38,3 +38,21 @@
   background-image: url(../img/#{$image});
   animation: animation_cenario #{$param-animation};
 }
+
+@mixin ombre($dir, $angle, $distance) {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  background: #777;
+  width: 50%;
+  height: 20px;
+  bottom: 10px;
+  box-shadow: 0 15px 10px #777;
+  @if $dir == 'left' {
+    transform: rotate($angle * -1);
+    left: $distance;
+  }@else {
+    transform: rotate($angle);
+    right: $distance;
+  }
+}
