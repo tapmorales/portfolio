@@ -42,6 +42,16 @@ $animationItems: (
     &>div {
       display: none;
     }
+    
+    @keyframes animation_cenario {
+        from {
+          transform: translateX(-50%) translateZ(0);
+        }
+        to {
+          transform: translateX(0%) translateZ(0);
+        }
+      }
+    
     @include phone {
       background-image: url(../img/cenario_all_1530.png);
     }
@@ -59,49 +69,17 @@ $animationItems: (
         width: $cenario-width * 2;
       }
       
-      
-      @keyframes animation_cenario {
-        from {
-          transform: translateX(-50%) translateZ(0);
-        }
-        to {
-          transform: translateX(0%) translateZ(0);
-        }
-      }
-      
-      
       @each $element, $typeanimation in $animationItems {
         if $typeanimation{
-          .#{element} {
+          .#{$element} {
             @include animation('cenario_#{$element}.png', $typeanimation);
           }
         } else {
-          .#{element} {
+          .#{$element} {
             @include animation('cenario_#{$element}.png');
           }
         }
       }
-  
-
-      /*.nuages {
-        @include animation('cenario_nuvens.png', 90s);
-      }
-      
-      .maisons {
-        @include animation('cenario_casas.png', '30s linear infinite reverse');
-      }
-    
-      .route {
-        @include animation('cenario_rua.png', '30s linear infinite reverse');
-      }
-      
-      .voitureHaut {
-        @include animation('cenario_carrosCima.png', '15s linear infinite reverse');
-      }
-      
-      .voituresBas {
-        @include animation('cenario_carrosBaixo.png', '15s linear infinite');
-      }*/
     }
   }
 }
