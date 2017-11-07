@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "gulp": "gulp",
-    "preinstall": "mkdir -p src/components/bootstrap/ src/components/font-awesome/",
-    "postinstall": "cp -r node_modules/bootstrap/dist src/components/bootstrap/ && cp -r node_modules/font-awesome/css src/components/font-awesome/ && cp -r node_modules/font-awesome/fonts src/components/font-awesome/"
+    "postinstall": "mkdirp src/components/bootstrap/ src/components/font-awesome/ && cp -r node_modules/bootstrap/dist src/components/bootstrap/ && cp -r node_modules/font-awesome/css src/components/font-awesome/ && cp -r node_modules/font-awesome/fonts src/components/font-awesome/"
   },
   "keywords": [
     "Front-end",
@@ -26,6 +25,7 @@
   },
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
+    "gulp-sass": "^3.1.0",
+    "mkdirp": "^0.5.1"
   }
 }

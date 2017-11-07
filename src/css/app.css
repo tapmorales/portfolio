@@ -78,26 +78,7 @@ h1, h2, h3, h4, h5, h6, .title {
       .header-anime__illustration {
         background-image: url(../img/cenario_bg.png);
         height: 300px;
-        position: relative;
-        /*.nuages {
-        @include animation('cenario_nuvens.png', 90s);
-      }
-      
-      .maisons {
-        @include animation('cenario_casas.png', '30s linear infinite reverse');
-      }
-    
-      .route {
-        @include animation('cenario_rua.png', '30s linear infinite reverse');
-      }
-      
-      .voitureHaut {
-        @include animation('cenario_carrosCima.png', '15s linear infinite reverse');
-      }
-      
-      .voituresBas {
-        @include animation('cenario_carrosBaixo.png', '15s linear infinite');
-      }*/ }
+        position: relative; }
         .header-anime__illustration > div {
           display: block;
           height: 100%;
@@ -139,7 +120,22 @@ h1, h2, h3, h4, h5, h6, .title {
           animation: animation_cenario 15s linear infinite; }
         .header-anime__illustration else .element {
           background-image: url(../img/cenario_carrosBaixo.png);
-          animation: animation_cenario 90s linear infinite reverse; } }
+          animation: animation_cenario 90s linear infinite reverse; }
+        .header-anime__illustration .nuages {
+          background-image: url(../img/cenario_nuvens.png);
+          animation: animation_cenario 90s; }
+        .header-anime__illustration .maisons {
+          background-image: url(../img/cenario_casas.png);
+          animation: animation_cenario 30s linear infinite reverse; }
+        .header-anime__illustration .route {
+          background-image: url(../img/cenario_rua.png);
+          animation: animation_cenario 30s linear infinite reverse; }
+        .header-anime__illustration .voitureHaut {
+          background-image: url(../img/cenario_carrosCima.png);
+          animation: animation_cenario 15s linear infinite reverse; }
+        .header-anime__illustration .voituresBas {
+          background-image: url(../img/cenario_carrosBaixo.png);
+          animation: animation_cenario 15s linear infinite; } }
 
 .card-portfolio {
   padding: 0;

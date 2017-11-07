@@ -82,7 +82,7 @@ $animationItems: (
       }
   
 
-      /*.nuages {
+      .nuages {
         @include animation('cenario_nuvens.png', 90s);
       }
       
@@ -100,7 +100,7 @@ $animationItems: (
       
       .voituresBas {
         @include animation('cenario_carrosBaixo.png', '15s linear infinite');
-      }*/
+      }
     }
   }
 }
