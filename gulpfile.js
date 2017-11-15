@@ -22,6 +22,6 @@ gulp.task('serve', function(){
       baseDir: 'src'
     }
   })
-  gulp.watch('./src/css/*.css').on('change', browserSync.reload)
+  gulp.watch('./src/**/*').on('change', browserSync.reload)
   gulp.watch('./src/scss/**/*.scss', ['sass'])
 });

@@ -1,9 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+/*@mixin phone {
+  @media only screen and (min-width: map-get($breakpoints, 'phone')){
+    @content; 
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: map-get($breakpoints, 'tablet')){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: map-get($breakpoints, 'desktop')){
+    @content; 
+  }
+}
+*/
 h1, h2, h3, h4, h5, h6, .title {
   font-family: "Open Sans", "Helvetica neue", Arial, sans-serif; }
 
+.js.menu-opened {
+  overflow: hidden; }
+
 .header-nav {
-  background-color: #a5cac4; }
+  background-color: #84b8af; }
   .js .header-nav {
     height: 50px; }
     .js .header-nav .container {
@@ -11,44 +32,40 @@ h1, h2, h3, h4, h5, h6, .title {
       padding-right: 0; }
   .header-nav__logo {
     display: inline-block;
-    max-width: 300px;
-    height: 50px;
     position: relative;
     top: 10px;
-    z-index: 100; }
+    max-width: 350px;
+    height: 50px;
+    z-index: 10; }
     .header-nav__logo img {
-      max-width: 100%;
       height: 100%; }
   .header-nav__hamburgger {
     display: none; }
     .js .header-nav__hamburgger {
       display: inline-block;
       float: right;
-      height: 50px;
-      border: none;
-      background-color: transparent;
       color: #fff;
+      height: 100%;
       font-size: 2em;
-      padding: 0 .5em;
-      border-radius: 0; }
+      padding: 0 .5em; }
       .js .header-nav__hamburgger:hover, .js .header-nav__hamburgger:focus {
         background-color: #74aea5; }
   .header-nav__menu {
     list-style: none;
     margin: 0;
     padding: 0; }
-    .header-nav__menu a {
-      color: #fff;
-      display: block;
-      padding: 1em;
-      font-size: 1.5em;
-      border-top: 1px solid #58988d; }
-      .header-nav__menu a:hover {
-        background-color: #5c9e93; }
     .js .header-nav__menu {
       display: none; }
     .menu-opened .header-nav__menu {
       display: block; }
+    .header-nav__menu a {
+      color: #fff;
+      display: block;
+      font-size: 1.5em;
+      border-top: 1px solid #45776f;
+      padding: 1em; }
+      .header-nav__menu a:hover {
+        background-color: #61a398; }
 
 .header-anime {
   background-color: #64a59a;
@@ -73,7 +90,7 @@ h1, h2, h3, h4, h5, h6, .title {
     .header-anime__illustration > div {
       display: none; }
 
-@keyframes anima_cenario {
+@keyframes animation_cenario {
   from {
     transform: translateX(-50%) translateZ(0); }
   to {
@@ -81,7 +98,7 @@ h1, h2, h3, h4, h5, h6, .title {
     @media only screen and (min-width: 480px) {
       .header-anime__illustration {
         background-image: url(../img/cenario_all_1530.png); } }
-    @media only screen and (min-width: 680px) {
+    @media only screen and (min-width: 768px) {
       .header-anime__illustration {
         background-image: url(../img/cenario_bg.png);
         height: 300px;
@@ -93,21 +110,21 @@ h1, h2, h3, h4, h5, h6, .title {
           top: 0;
           left: 0;
           width: 4800px; }
-        .header-anime__illustration .nuvens {
-          background-image: url(../imagens/cenario_nuvens.png);
-          animation: anima_cenario 90s linear infinite reverse; }
-        .header-anime__illustration .casas {
-          background-image: url(../imagens/cenario_casas.png);
-          animation: anima_cenario 30s linear infinite reverse; }
-        .header-anime__illustration .rua {
-          background-image: url(../imagens/cenario_rua.png);
-          animation: anima_cenario 30s linear infinite reverse; }
-        .header-anime__illustration .carrosCima {
-          background-image: url(../imagens/cenario_carrosCima.png);
-          animation: anima_cenario 15s linear infinite reverse; }
-        .header-anime__illustration .carrosBaixo {
-          background-image: url(../imagens/cenario_carrosBaixo.png);
-          animation: anima_cenario 15s linear infinite; } }
+        .header-anime__illustration .nuages {
+          background-image: url(../img/cenario_nuages.png);
+          animation: animation_cenario 90s linear infinite reverse; }
+        .header-anime__illustration .maisons {
+          background-image: url(../img/cenario_maisons.png);
+          animation: animation_cenario 30s linear infinite reverse; }
+        .header-anime__illustration .route {
+          background-image: url(../img/cenario_route.png);
+          animation: animation_cenario 30s linear infinite reverse; }
+        .header-anime__illustration .voitureHaut {
+          background-image: url(../img/cenario_voitureHaut.png);
+          animation: animation_cenario 15s linear infinite reverse; }
+        .header-anime__illustration .voituresBas {
+          background-image: url(../img/cenario_voituresBas.png);
+          animation: animation_cenario 15s linear infinite; } }
 
 .card-portfolio {
   padding: 0;

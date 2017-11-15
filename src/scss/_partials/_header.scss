@@ -4,11 +4,11 @@ $cenario-width: 2400px;
 
 // Items d'annimation
 $animationItems: (
-  nuvens: null,
-  casas: '30s linear infinite reverse',
-  rua: '30s linear infinite reverse',
-  carrousCima: '15s linear infinite reverse',
-  carrosBaixo: '15s linear infinite'
+  nuages: null,
+  maisons: '30s linear infinite reverse',
+  route: '30s linear infinite reverse',
+  voitureHaut: '15s linear infinite reverse',
+  voituresBas: '15s linear infinite'
 );
 
 
@@ -70,11 +70,11 @@ $animationItems: (
       }
       
       @each $element, $typeanimation in $animationItems {
-        if $typeanimation{
+        @if $typeanimation{
           .#{$element} {
             @include animation('cenario_#{$element}.png', $typeanimation);
           }
-        } else {
+        } @else {
           .#{$element} {
             @include animation('cenario_#{$element}.png');
           }
