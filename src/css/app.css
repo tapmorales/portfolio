@@ -47,7 +47,8 @@ h1, h2, h3, h4, h5, h6, .title {
       color: #fff;
       height: 100%;
       font-size: 2em;
-      padding: 0 .5em; }
+      padding: 0 .5em;
+      background-color: #84b8af; }
       .js .header-nav__hamburgger:hover, .js .header-nav__hamburgger:focus {
         background-color: #74aea5; }
   .header-nav__menu {
@@ -70,6 +71,7 @@ h1, h2, h3, h4, h5, h6, .title {
 .header-anime {
   background-color: #64a59a;
   padding-bottom: 0;
+  margin-bottom: 0;
   padding-top: 96px;
   overflow: hidden; }
   .header-anime .header-anime__title {
@@ -78,7 +80,7 @@ h1, h2, h3, h4, h5, h6, .title {
     font-weight: bold;
     font-family: "Open Sans", "Helvetica neue", Arial, sans-serif; }
   .header-anime .header-anime__subtitle {
-    font-size: 1.8em;
+    font-size: 34px;
     color: #fff;
     font-weight: 300;
     line-height: 1.5; }

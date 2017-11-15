@@ -16,6 +16,7 @@ $animationItems: (
 .header-anime {
   background-color: $green;
   padding-bottom: 0;
+  margin-bottom: 0;
   padding-top: 96px;
   overflow: hidden;
   
@@ -27,7 +28,7 @@ $animationItems: (
   }
   
   .header-anime__subtitle {
-    font-size: 1.8em;
+    font-size: 34px;
     color: $white;
     font-weight: 300;
     line-height: 1.5;

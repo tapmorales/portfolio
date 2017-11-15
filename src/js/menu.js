@@ -8,7 +8,7 @@
   btn.addEventListener('click', toggleMenu);
   
   function toggleMenu(e){
-    if(menOpened){
+    if(menOpened) {
       closeMenu();
     } else {
       openMenu();
@@ -17,11 +17,10 @@
   
   function closeMenu(){
     menOpened = false;
-    hrml.classList.remove('menu-opened');
+    html.classList.remove('menu-opened');
   }
-  
   function openMenu(){
-    menOpened = true;
+    openMenu = true;
     html.classList.add('menu-opened');
   }
 }())

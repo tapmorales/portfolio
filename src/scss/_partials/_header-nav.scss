@@ -36,6 +36,7 @@
       height: 100%;
       font-size: 2em;
       padding: 0 .5em;
+      background-color: lighten($green, 10%);
       
       &:hover, &:focus {
         background-color: lighten($green, 5%);
