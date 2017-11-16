@@ -16,7 +16,9 @@ $animationItems: (
 .header-anime {
   background-color: $green;
   padding-bottom: 0;
+  margin-bottom: 0;
   padding-top: 96px;
+  overflow: hidden;
   
   .header-anime__title {
     color: $antracite;
@@ -26,7 +28,7 @@ $animationItems: (
   }
   
   .header-anime__subtitle {
-    font-size: 1.8em;
+    font-size: 34px;
     color: $white;
     font-weight: 300;
     line-height: 1.5;
@@ -41,6 +43,16 @@ $animationItems: (
     &>div {
       display: none;
     }
+    
+    @keyframes animation_cenario {
+        from {
+          transform: translateX(-50%) translateZ(0);
+        }
+        to {
+          transform: translateX(0%) translateZ(0);
+        }
+      }
+    
     @include phone {
       background-image: url(../img/cenario_all_1530.png);
     }
@@ -58,17 +70,6 @@ $animationItems: (
         width: $cenario-width * 2;
       }
       
-      
-      @keyframes animation_cenario {
-        from {
-          transform: translateX(-50%) translateZ(0);
-        }
-        to {
-          transform: translateX(0%) translateZ(0);
-        }
-      }
-      
-      
       @each $element, $typeanimation in $animationItems {
         @if $typeanimation{
           .#{$element} {
@@ -80,29 +81,7 @@ $animationItems: (
           }
         }
       }
-  
 
-      /*
-      .nuages {
-        @include animation('cenario_nuvens.png', 90s);
-      }
-      
-      .maisons {
-        @include animation('cenario_casas.png', '30s linear infinite reverse');
-      }
-    
-      .route {
-        @include animation('cenario_rua.png', '30s linear infinite reverse');
-      }
-      
-      .voitureHaut {
-        @include animation('cenario_carrosCima.png', '15s linear infinite reverse');
-      }
-      
-      .voituresBas {
-        @include animation('cenario_carrosBaixo.png', '15s linear infinite');
-      }
-      */
     }
   }
 }

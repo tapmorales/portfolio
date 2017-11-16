@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+    browserSync = require('browser-sync');
 
 // TASKS
 // Sass
@@ -9,9 +10,18 @@ gulp.task('sass', function(){
   .pipe(gulp.dest('./src/css/'));
 })
 
-
-
-// Watch
-gulp.task('listen', function(){
-  gulp.watch('./src/scss/**/*.scss', ['sass'])
+// html
+gulp.task('html', function(){
+  gulp.src('./src/**/*.html');
 })
+
+// Server
+gulp.task('serve', function(){
+  browserSync.init({
+    server: {
+      baseDir: 'src'
+    }
+  })
+  gulp.watch('./src/**/*').on('change', browserSync.reload)
+  gulp.watch('./src/scss/**/*.scss', ['sass'])
+});
