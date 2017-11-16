@@ -35,7 +35,7 @@
   }
   
   function openMenu(){
-    openMenu = true;
+    menOpened = true;
     html.classList.add(classMenu);
     menu.setAttribute('aria-expanded', true);
     btn.setAttribute('aria-expanded', true);
