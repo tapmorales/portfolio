@@ -1,16 +1,29 @@
 .js.menu-opened {
   overflow: hidden;
+  
+  &:after {
+    background-color: darken($green, 50%);
+    opacity: 0.5;
+    display: block;
+    content: "";
+    position: fixed;
+    top: $header-nav-height;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 .header-nav {
   background-color: lighten($green, 10%);
+  position: relative;
   
   .js & {
     height: $header-nav-height;
     
     .container {
       height: $header-nav-height;
-      padding-right: 0;
+      padding: 0;
     }
   }
   
@@ -20,14 +33,15 @@
     top: 10px;
     max-width: 350px;
     height: $header-nav-height;
-    z-index: 10;
+    z-index: 20;
     img {
       height: 100%;
-      
+      padding-left: 15px;
     }
   }
   &__hamburgger {
     display: none;
+    background-color: lighten($green, 10%);
     
     .js & {
       display: inline-block;
@@ -36,24 +50,22 @@
       height: 100%;
       font-size: 2em;
       padding: 0 .5em;
-      background-color: lighten($green, 10%);
+      border: none;
+      border-radius: 0;
       
       &:hover, &:focus {
         background-color: lighten($green, 5%);
       }
+      
+      @include tablet {
+        display: none;
+      }  
     }
   }
   &__menu {
     list-style: none;
     margin: 0;
     padding: 0;
-    
-    .js & {
-      display: none;
-    }
-    .menu-opened & {
-      display: block;
-    }
     
     a {
       color: $menu-anchor-color;
@@ -65,6 +77,70 @@
       &:hover {
         background-color: darken($green, 1%);
       }
+      
+      @include tablet {
+        padding: .5em 1em;
+        border-top: 0;
+
+      }
+    }
+    
+    @include tablet {
+      display: inline-block;
+      float: right;
+      
+      li {
+        display: inline-block;
+        
+        a {
+          border-top: none;
+          transition: all .3s ease-in-out;
+          
+          &:hover {
+            transform: translateY(.5em);
+            box-shadow: 0 5px 15px -10px $black;
+          }
+        }
+      }
+    }
+    .js & {
+      background-color: darken($green, 10%);
+      box-shadow: 15px 25px 70px $black;
+      position: fixed;
+      top: $header-nav-height;
+      width: 80%;
+      left: -100%;
+      bottom: 0;
+      transition: left 0.5s ease-out;
+      z-index: 1;
+      
+      @include tablet {
+        background-color: transparent;
+        box-shadow: none;
+        display: inline-block;
+        text-align: right;
+        height: 50px;
+        right: 0;
+        width: auto;
+        top: 0;
+        position: absolute;
+      }
+      
+      li {
+        display: block;
+        @include tablet {
+          display: inline-block;
+          
+          a{
+            
+          }
+        }
+      }
+    }
+    
+    
+    .menu-opened & {
+      left: 0;
     }
   }
 }
